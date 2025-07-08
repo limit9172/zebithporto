@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Zenith</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #16222a, #3a7bd5);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        header h1:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px 0;
+            margin-top: 30px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            max-width: 500px;
+            margin: 30px auto 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover {
+            color: #ffdf00;
+        }
+
+        .section {
+            padding: 60px 20px;
+            background-color: #fff;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2a3d66;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile .description {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3498db, #2ecc71);
+            transition: all 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            font-size: 1.8rem;
+            color: #2a3d66;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            color: white;
+            transition: all 0.3s ease;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background-color: #2a3d66;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 8px solid #8d6d5b;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project h3 {
+                font-size: 1.4rem;
+            }
+
+            .social-links {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body style="scroll-behavior: smooth;">
+    <header>
+        <h1>Welcome to Portofolio Zenith</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>Tentang Saya</h2>
+        <div class="profile">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExIVFhUXFRgVFRgXFRUXFhUVFRUWFhcXFhUYHSggGB0lHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBKwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAgMEBgcBAAj/xABAEAABAwEFBQUFBwMDBAMAAAABAAIDEQQFEiExBkFRYXETIoGRoQcyQrHBFCNSYnLR8BWC4ZKi8SQzQ7IXY8L/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMEAAUG/8QALBEAAgICAgEDAgYCAwAAAAAAAAECEQMhEjEEIkFRE2EFcYGxwfAjMhRSof/aAAwDAQACEQMRAD8AzRErqveSE91xwnJw3EcCEMBSgvpY5GihsmwljitBa9kmFwoSw68e6d4U32uXcOzEoGdC0+GiyrZm93wStc1xGa3C8ni33Y8imIsPg9uan5DnDNDNdxevysj5EP8AHa9j5glbmepTJClTMzKaLV52aDjJoCehmi5ROFq5hUKCP2W75JASxpcBrRRZYi00cCCti9ld1D7M97hqg/tGuBob2jQARrTeqLHcbDkXEz2xPaCKMxOJyrpXotBgtIijaHkVpmBu5ALPrvnEbsZFSPdH5t1Vc7hsLnffTGrjmAfh/wApsXZKfQYs05fnho3cTqfBS2BcijJNAEWsF3EkADEfQLVVdkUreiPBASnrRFhOGmYVpiu1sLMbs3AZcAeQUaybPSy1kpSpyr8ykjNdvos8WqAMFlc5waNT6I9d9x9q4ACjAadQFYbp2YEZxPdiNNw4o9Z7O1go0AKWTzEv9Bo40kNWOwsjaAAMgolvsBeTQIo51EEtm0bGuLQMRAPosuL6kpXHbOlGPuIbs63e7yCWblhYKuJpzICCX3tPM3DgFA4cNELtF5SySBr3mm8V48ltjhzSVylSJ+m6SLK+97JF7tPAZ+agWrbSBujXnwCpl5QOY9zTXl03IfMMitUPFwdybYjyz6LlaNth8MR8SPogt8bQOnZhLQ3OuRQSF1R0SsKtH6GN3GOwOUn2Re1LTmcktzl60Q1CbirToknnkwpHnJh8SlFqQQoubHIZYnI2c0+Qmnw8EpxIZTfRLMzRwQi1wuIycWniqzedttURo52W4gKc58QpWW28r2bG0kmnzKzu8LYZXl53nLom57Q55q5xKaWTJl5FIxo6upK6pjltnsQLccZDhvA1HgoYT93uwd8kgaAfi5dE1K6riaUqa04L3LTSkFXdCmFbb7JbSZLLMw6D6ghYixbJ7FHdyZu40KOffiy+1fuPVwkvsZh/TrH2kgtE8zKPcKRxB3xH4ifoh9/2extw/ZXzu1xGUNb/AKQ1aBtJsUGSzWmY4YQ5xAGriTpyVAdZ32mbDG3U0aBuG5T8hRl64uzNC2kvcCFqXFZ3EgUOZoty2Q9nkMcYdO0OeeO5WGXZiyNpSFta5ZLzqV0W40yJsbdnZ2NjTvFT4oD7RIQYy3TJaG2GgAAyCqG2dzSTDCG5HLNVxPk6FzPlszC69kYMnmQyHUCoDfTVWeGxMaKVFOA/cqJ/8TWt7wYJBG3e5znt8qZlW25PZdJFQyWgyHfie9wH6RoqRlig6k0RcWyLc9hdIcMbaDeSr3dVzhgyFTvJRC7rpZE0NA/z1RABZM/k89R6LQioohC7WEguGIjMV0B6KaAvVSHSLI232McnmDGlx0Ar5KPYrZ2jcQ0JNOgyQ++ZSY6VyLww/wB9W/VS7qjwwxjgxtetE2uP3Ook2luIEclW23SGuc4D4aV3kkj9lZikPYCjHI49HFfddweGEjQn5KuXxCY7RpqAR8vmCr/FEAPH6qu7a2AljZWj3MnfpOh8D81XHlfKmwTIF73eJIhINaehFVUJoKfzer1s3aQ+MtO75H/OLzCCX7duB5poc/DlzCfFncXxYuTGpbRTqYXfzRTS1OW+xEtxDUeoTNkdVnTI8uFeS187M3Fo4W0yTboqGu45FOPHl8lKs7MQof8Anmg2FELsk2+NEJIfNR3DJFMYgviTJcRqP2Uwj0yTJcK0ROGXCqh2uzNeC1wqCiOBcAHBc0Ez297ldEcTc2fLqhK1K2ywMFZKtB5VCrd4f092eI15BZMmJJ6ZSLKiuqTanRV+7DiOaj1URy0xTxuiEbhhcDUO1rXcUn7IfhId0P0UBqea5evCdraCkSY4HVpQrbvZJYiyNx5BZjsddc9pkAYKgHMnMBb9s7dfYRBuVTrRDzM0I4HBdspdJjN+3KbQwx4u64513dAh10bHwWXNjQXHU0zVsokvjqvJjnmo8L0RSp2geyNefZKvbXdmiDWAJVEn1H7BEtYOCatDGZF9MuKfJosr9pu0uF4jacgqeNheWdXX3Fk6L3eO0lmh1kBI+FuZ/YJ66L3E7cYjcxm4vIBdzAFcuawyxXmxv39oPd/8ce+QjiPwhXHZS/JrUTPKcELTSKMfE4ZYnHV1NAONTuFNWfxcWOPpd/d/wgx32an2g4pMswHVVO5rzdPM8gERR5Z6vkPXQAbuYR1j6ledJU6GJpcmrRJhaT5dTollQ7RJWaOPgDI7o2gHqQfBA4avCyVge3fhJ/uHeHqFJu+XFGx34mh3SoCkuCH2fugRD4ThPTUehB8VwQgCuVzUS2W1rMIOrnBrRxJ/YZqB/UP+sbFXLsif7sX7Ao0cHAFyRgcCCKgihB3groK6gCiky2U2S0Uz7N/unkdWnm00RG+LH2sfd99ubetNPFGb1sAmjLDrq08Hbj/OKr112pw+7kyc04c+W7r9EzlbsaPQBsj2uycKHQ9UIvCwmzSYwKxPyP5a7vqPJWa/LDhfjAyd6Hf+6istQoY5RkRQ1zaQrQyU7Qso2tgKWzUzbmNfPPJOwxbwpjrDg9w1jOgOZZyB3j5JyFiq8uiaxbINobvQ1mpb/KblYX2ZDLdYyCHjoU2PIuhZRa2CJ8nA7qUTUsIP0PHrzUy0geHqOfhoogyyOY/mYWhCHMNMlyieoCOP83rzoCNxRsJGnha9pa4VBVStOxsjnnsiMOuZ0VzokThxaQ00JBAPBJOCl2FNozW9LvEDsBeHP300ah6lXrY3xyESVJrWvHmoiwPsqg+GpTWqVDYnO0CP3Xs45xGS92Hjye/Yc1T2RXaGWXHTNyv6E7L2DsbOxnJF14XkS5ZGGbtnl5eTVprhdTWhUkhBuW2MBDa5ngnnPAGaq2zVheZHSvJpXKqOWx5VsmKMZ8U7OI15W6jTwoVgG1tsEtqc4mrW+vJaxtdeXZwuNdxWEWiYucTxNVvww4RF7kOF7pXipzJAHBo4DgAtn2YY2GJhIp3Q1jd4YBp1NMRJ5Dcsf2fjD7TE13uukYDzGIGniQAthdXEKAk7gOGXln8ln8qV1EtFVsLXjenZRktp2jvdroMvedyGXXJFroa4RRYq4sILq64iKurzqSqTZo32i09lWvd13Na00cemYpxV/bqsctKgMlh2Z6IFc0xfarU86NLIh0aC4+rkUnmDWPcdA0nyCCbK6Su3ve1/+qKN31XR6YrW0WOaUNaXE0AFTXgEOuycSDttzhUdMyD1oQoW005cI7O33pjQngwUxfzqmNpbX2dmwR90ydxtBo3fQDlQeK5RsJEsszrVbcY/7UOnA6gHqTU9Am7Y9zbwD/ha6NhPDtGmn1RXZyymzxCN7QHu7xIOpNPMAUH0GpVBYRI61YtHvY0HhgjYQ4dCfRPyV/pR3ZYAdEtRIJDgGLUa9RwUpSOOlCL4u0P77aB2VedNDyP+EWquPAOXguOToqzXY2mKTI7jzH1Qr7MCTG8ZjT9wUbvCGj6HdoeI58VCtTC4Aj3m6cxwK5OilaAlou+RlS0kjlr4jeo7JyDmPorLH3gCN/oeCi2uzjWiqsl9k3j/AOrGrE7FuPPKiVeFjproRkeW4pFlAB4UP/CPwtZKzA7XdxHRDkFrRnNvs5aShxHl6hXK+7qczUVG47iPoVUrRHQ5eW8LdinyRlkqZHLCMxmOX1TFuvK0htIRGcvjDq+FCpjHjoeO49QnH2aurfEKjRyZRHX7bIpKzMqDqAKDwIRea/29m2ZoqytHDe0qTedhtINYmMkadzu64eJyKD2iC0lhY6wnM1IFKHmSFLcfcbskXgIbZES095ufMciFR3xkEhH7RZ32Wj3hsbne7G04nEby7PuhDpmte4uBIrnTqo5HffYy0b3s/sI4gF4wjnr5K93ZcEMIFGgniQmbXtCwZMBcU3Y7fIXYpHACmTd/kr583kZlcnS+C2w+mn2toyqhUlqfJpkOK72VFkWH5ECX21vFJdbmZCuuSESptjyCnWBHFjY0bkieIOCYsloyzUyqztOLOZiXtVtZbSOupzWYFa37Sroc6UuIy3FZTbYixxFCvccP8cZrqieKXyLu6bBNE8mgbLG49Gva4+gW2WxxjOIaOaWfpJFQR5etVgxeDUHotx2ftX2qxRSVq7AGv5PbVjvWp8l53kbaZoTJWwUR7Vzv/qJdzL3NoPJp8lcgMyqvcJEE8sR0fRzK7wC40/3HyR6K1d8N4gkf2kfuFkntgoj7Sy4bNNzYR55KHsqD2OLKha0DjWNgiNf9APipO1Da2eT9NfI1S7ns3Z2aNtM8Icersz6lG/R+oEt2BLwvBv2t7jDI/sw2IPaKgF1HZ1yBqVFv2+YRacDu0rDgJLQHNB96jxzFOasGzje48n3nvkeeYLiG08AFDZZ43WaZhwsdLLIS85E0lIYT+KgDQBwAT4+Dl6iWWThG0TYb0ZMyrPvW4ici0OZmCMQcQRSp03BSLBKRicMwXVLamugFQDpoctCMxrmGsV0YXOdHkGtoSNHOaMyOvDqpNlGGQFwzrhcMhRriK6aitHA+CTIoqTUXoODJLJj5SVMsDnjI7iP8pyxy1aOIyPUKE0uxvYR3aNcx2dDXEHDkRQf6lDsVuwzujPxNDx5lp+XqkorQa7Sh5Lz5M0xOULjvL7x0TsnAYm/mby5gj1C46ife0YcwOGrTn+k/wKDY4hioRrp/Ohr4KTHPlQ9PA5JNkZXq069NPmUBiLabL2bstCU7PZwRpqKjqNUQkYJG0OvyITcTDhodWnzG70XHWVSRuGQD8WXiMx6V9FNlDsFY/fbmB+KmreRSdooaVI1BDh4Z/ulWa0ggGuqf7nfYVYb9ZMwgjEPiB94dR9Qgd9XG1/ehOf4Tr0B3/ND9oIDHL2sZIDjXLLC/eOh180iC/XaPFfzN18QtMYNeqBmcvaQFljLSWkEEbilwWlzeY4Ipb7cyQceFRQjxQqRg3LVF2tk3Q5bL9iibieH88LS6nWmirF4bfihEMRruc8inXCFYPs7jo0nwQq9LmjILnQEn8vdJ8ckslL2YVIz612l8ry97i5x1J/mQTQRK2GAEhsMgIyIc+lPDVQS78o9Vkadlkbbbts3DusDQTkMLRVWPY66JXffzuJLtAVVvZtswZn9vKDhGld61tzgwUHgF6vl+RCN4sS/NlWuP5igwDJM2l1ASuPleM6ZKLbbYA3XLevOjFtkjkU4cKrxVQkv0smAaKtKslktzX6a8FqljcRl8hq7ng90qV2hZrm3igoeRoot729zYnZ7lmeDlL8wSerLBed3R2hmFw6HgsW202VMbyKdDxCuWxe3DXHsZTTOgJV1ve6o7QyjvArRiyT8Of08m4v8Atk5QvaPliWwyB2ENJO4cVpnszldBG+CdhjJfjZiFAcQAIB/tHmtDuXYuGJ2NwDnbqjRHrXdsUjcLmNI6BR8nNik+MLoeNop97R9wSNNHRnEDxG8Hl+ycFqxiCUZYjG7wkAFP9wQXaON8LnwY/uqgiutPw13iu5G7nAfBHQg9xtCNxbpRZ8uJwimVi7C97Q44pG8WOHoUQbHlRewVCeaFnAQLFYQ1jW/hFK79eKWyzAANwggcfoptF7CuOIudKYfJRxZj2gdTcQ7ShG4EdURwrhC6jrGnqkbSTdlaY3jcM+lTX5lXl7VV79sWO0QtIyLZQemED/8ASeDp2zn0F7POHsDga1A8jvVW2sDmuikYaODy0GoGbhUDPWuEinNP7K2yhdZ3GpYThPEA0I8D80vbGM9g4tJBFCKa1rh+vqmS4zoEnps5dV6doQaGjm4q0NA4HC9hOgIOdDrU8EdsjqP6rPtntnpnNs85nLsQMxq84g6hAFDlhoGAjrnuVnbb9P5mNyObGovTFw5Vkte4etcpjdiGh1HGilRSh4q05fLqoVqlD2t/Np1pWnjQjqQh1jlLDkd/mOH0UStD9/x92tOIKp0FrpVvBXu9JGvjcDWmHECNcs9FmVsfhmIrlX55/NafHipWiOWTjTRNt9qxNIdmD8+PyKDsjGLC405qZI7d/M0NtbS2pGfCvyqtsIcVSM0pW7ZIdYZBXIEbiDUHrvHqg1uZbgaMiYOBq5x8sKJsvV7G0DcfAE0z6quXntxamktELYjxdVx8NxSTbRSKix21XjeMTMUjmsaN7mNA6BvvOKhx7bTaSNZI05HIsPhQqvW28JZnYpZHPPM5DoNAo6jyZSkSb0nD3VFSPhJ98D8Lj8VOKgUTpSaJWHo+tbHCyFgjjAyyUiOHOrsylRRhoSy5c2M3bOkIHfdzmQVYacRxRsPXQuhNwdoVozS1x4ZGgtoWpw2mmbTQq531dDJmnKjtxWd3jC6J5Y7Vb8eRTQttFjsN+tLe9qo963hjY4DeCqXZ7WQ9zfFTLHajjLeIRSSYW7RT3vLXkg0o76rd/Z/fUk9nb2raEZA8QFik1kLrQWcXfNbtcFjEMLGDc0LvLyRliUGt/I0F6bLECvONFGhn3FLtdSxwbmSDRePx3TA+jMb6vQSyzvwNcYhlUZmPEGvbXxa7PgeK9s5fTBkw93e05Ob1H13pv+mPgmxSsIDiQ8H4mPBa8DwJVRv665IZDgcQ9jiA4ZV5jkRQr6GXi480HCD9rX8/37ixlx7NwsVra4VBU1rliez225YQ2fuHQPHuH9Q+Hrp0Wl3dfbXAVOuhGh5grwMuGeJ1JGjjyVosa6o0NpB3p8OUxDtFxKSSuOPEKHaIBiD6ZgEDkHEE/wDqFMTE6ATO7HC7t3ubue4Ho8ubXwyPgjF4WkTWUuNdAHAaghza0r/M1EuX/vyDiXf+x/ddhsjgZIdxeynQuqT5BWm97+wUtDlhjwMZWIigHuOLeFCQcq76gjjvQm2swvoxuFrZcQbwY5rq6a5uKvbYsqUyVT2is+BziNDhp5uqkhJt7B9OMVcUSYbXijw8DUeH/KlOl7QVHvj3h+L8w58QqgbZQObqcBNN5FCuw3qfKlXbsW+nTiqPDIKyxZbH24dmOVWn9JBCo16++D0/nopwvIu13nWmo0rXUoVfdowxSSDPs246caBxor4cbg7ZnyzU9I655I5oZBa47ZC9gNCWlr272O/wRryT1itrJWh7DUb+IPA8FnVpkdHO9zHFrhI+hGR94rROVUyUI2KmmtFnkLHPe1zdxcSOoByIKdnv2WRuF4Y4c2/yictV8ds0NnYHOHuyN7rx1GhCGPYNxr4UKzttdMtXyjpeNwA8/quVSV1KOeqvLi4gwH1++Tiq7f8AfeAUac1BvvaZjQQHKh269XSE0OpWiGOtsVy+C33XtlR2GRXGx3tG8Va4LF2sFM9U/DbZIs2uNE0scWFS+TaXWkKgbbztxtI10Q1u0UhaO9uQu8JjIKk1K7HHgLJ2RbRBV2Juqb+3ljsx3hvTkMlQh97B2MYRUuyCtCm9hSDWyFnM1sa4jfVbS3RUnYC4uwj7R/vu9FcDIs/kPlLRV6SSHHvVU2r2yNkcxraZnOueSPWu0BrS4mgAqVhG2l8i0Wlxae63IJ/FxQc/WrRKbrSN62fvuG3RZtbWneacx1zUDaPZES0dFSoaG4ScyG5CjuNKDPhqsQuDaOayuxRuI4jotX2e9p8coDZW0dUVINPGitk8PNgnz8fr4DplVvPZggkOYQd4IUGwCeye5V8e+N1cv0H4flyW2llntLQe6/gQcx4hDry2Tjc3uZHmag/si/xCGVcM8RKnB3Eqly7Qh4+7cTT3muye3qPqMlaLBfTXZHIrPb82ddG+oxMeNCCQfAjUKDZ9oJYjhnZiH42DvD9TdD1FOiz5vw1tc8LtGiOaM9S0zaIrQCncSzm6toGuH3codyrRw6tOYRN+0jwBSniK16rzXjnF00O4L2Zc0xMUGh2mjwYn5HeBnnyQu89oXy9yFpFcq/F4AaLowchOmRrqytZ5uePUlWxllGIupnSnkgtxXUI++8jFuG5v7lG3TgLssk5aGSdDrsgqftja2gAHdVxPAAFHbbeAaCSaCiy/am/4w+sjtKPwD3nAV7NtNwqMRP5RxRwxcpX8AnpUcZEcTnvOEOFKVoQwCgxHcdTloSVHlt5jmszA0Bj5MJBGeHCaUG4Yi3/Cpt6bSTTHI9mzc1vzc7efL6qXtFeWJ1mcK91jZDTi4g5c+6tvaM9NPRerzn+8bpm0+JzPyBQq+ZP+nn5xPH+wqL/VO07J53VLjuBbk/wFa9HBD7svQTmWJ/x4sP6Xd2nXT+BUjSVE5W3ZXrntbo5WkEgFzQ4biCQMwotuzkefzu/9illha7PVpz6gpt2Zqov4Lpe4zRconSEmiFBEUXCEshcIQOEri6QuUShN2vzZZpq+pNN1SqjbIsBAHFaFe97toWg1VJt0Jca4TSq1Jt9knp6ITpAEkSV3LpizqlInDTX4TTcl9vnQr0jKhNfZBzQCh6wtrUa55K67P7PtJEsgzHuhRNk7ir948UG4K7sFBQIORRKh1h4JeJMhN2qbC0lIlZzKN7U77McXZtdTFqscY+hqrVt/bHS2g0zDclVCKK0040SjvZNY9dLyDUFRIH504qQStuLO3GzmWO5Nqp4qYJHDxWn7Me0xjsMdoy3Y6+pWEtkoUSs81dFrjHB5ceOVer5QOTR9PPbBamatkbuIOnQjRVa89hyaljmu5Hunz0PoslufaCezuxRSObxAOR6g5Fa5sJtt9rDmShokbTTLEONFgzeD5PhLnilcf77DLjPopl8bGyR94xlvBwzp/c3RB3TWuIZODxuxjEfMEHzJW/teChN7bOwTNPdDXbnNAHmNCoR/Eo5NZo/qgcWujDmbWOYaTwED8UZr/sdT0JRaw7QWeQ0ZM0O4Oqx3k6lfBTNpNl3xVxx93c4ZtP7LPr1uto3LRPwYThzwu0Hn8mnx3lI3R58Ut18y/i9FklkvK0Q0DJXUHwu7w9dPBGrPtrl95CcQ3sOR6g6eZXmywJdofnItV83zgYZJXZDQb3O3ABZjbrW6V7pH6uNTwHADkBQLt63s+d2J5yHutGjRy581DD1SPGOkLt7Zx7OCW6TFTkAPACiSXJuqDoKCENpIBG5wo4eFKj08kzG8tcHNNCDUFcZmlYV1DUO22btHY6ZnUc+KjEJ1sZJoEVguJxpjexldA51D5J445S6BVAIhJIVhttxBmWIkkVFBkehqgTmpZ43Ds5MaXKJzCrHcuyrpY+1e8Rx8Tv6BLGDl0ErFFzCro7YfEKwzRv5YqHyK83YC0cB5j90//HmGma5Dcsbc6V6qBtDZBhyCshUC84sTCEqYslaMvccyElSLyhwyKOU5NdHkVuG7+1kApkNUKK0LZS7+ziBI7zsylbHgvcNQRBoAGgTq41dSjnghe0c+CFzuARRVT2hWjDZnJodiZHSMmlnxPcTvJXexY7UBCu3TrLZRerHyYVTJcSe6wN1Cbks6Qy9RvCX/AFBh3kdQrxyYJKk0D1IiS2U7lHa8tKKYwcwU1K0cFKfjr/aDoZM7DaKiqlw3k6E42OLXDQjVCJX4dE21xcQCVRfiEorh2+juPuarst7SJ2gC0gOaTk4ZOpxI3rTLo2ihnaDHI11d1e8PDVfN5lI0KlWC9nRuDmuLXDQg0KTP4PjZI6fGX/jGU37n0raWNkY5jtHCh8Vku2WyzoSdXRnR30PNHNnPaDE9sccocH5NLjTCfzFXa1Wdk0ZY8BzXD+ELzMUsvhzqS0wyje0fNFtsTmlD3PoaFbDtbsWYWOkjOJg4+82vzWVXnYi0rVljGUPqYna/YRP2ZEIaUkxBJY0pxSjUlbQ4gwhP2a7XP90ZcdyRG6p5IqZzSgNBwGi5Qi/YeEGzzrowsJDgaagIeWI5A37l540CZu6w43Z5NGZPIKssKdcSiVXZyxxCJhkI73wfuhc0ziaklE7znxGgyaMghzmJMvp9MQKLew5cF4RuAimy1wO4E7jyQq97pkikwka6EbxyUWitlw7QQgN+0sLiz3T8gUqqaqRzhuxWymwE05D3tLY9ST+yY21t+F/2eOoYzu05jei1s9pk4JEQa1u4U0VFvC1uleXu94mp6qduCYst0kNRWl7c2uI8VLbfc4/8rvMqAQuKXKS9zj6aqmZxkvLymAoG09mo7xQUtXl5UXRInXTYu0kaN1alaXC2gAG4Ly8pvsquhdV2q4vIhPVWe+1K1fc4ea6vIonk6MjAXQF5eSnI9gXsK8vLgimuI0JCfjtR+LNeXlaGacemBo9aCCK1XrPFQVP8C8vK8Z8slv4B7DpdzSS2q4vLRGbegMfs8rm6FaVsh7QBDGIpw5wHuEZkDgary8rvHHJDjLo5SaL9YNoLJa2ljZGnEKFjsjnyKzjbXZfsH5ZxuzYfoV5eWbBH6PkrHHp92dkWkygXhZsCFPqTmvLyTzvTOkdFjzHojYSDl5Ly8pY5tvZbHqQfMNY2tHFImOBmBv8AceK8vL0pajaLVbBTokh0K8vLCylDRgSDCvLymxWhBiSDGvLyRk2cdGk4F1eS0Kf/2Q==" alt="Zenith">
+            <div class="description">
+                <h3>Halo, saya Zenith</h3>
+                <p>Saya adalah seorang pelajar yang sangat tertarik dengan dunia Cyber Security. Saya senang belajar dan mengembangkan keterampilan saya dalam bidang ini.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Proyek</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Kalkulator Python</h3>
+                <p>Proyek ini merupakan sebuah kalkulator interaktif berbasis CLI yang dibuat menggunakan bahasa pemrograman Python. Dengan antarmuka sederhana, pengguna dapat melakukan operasi matematika dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.</p>
+            </div>
+            <div class="project">
+                <h3>IP Tracer</h3>
+                <p>IP Tracer adalah script Python yang mampu melacak lokasi geografis dari sebuah alamat IP menggunakan layanan API eksternal. Informasi yang diperoleh meliputi negara, kota, ISP, koordinat latitude-longitude, dan lainnya.</p>
+            </div>
+            <div class="project">
+                <h3>Phishing</h3>
+                <p>Tools phishing ini dirancang untuk edukasi dan simulasi keamanan, dengan tujuan menunjukkan bagaimana serangan rekayasa sosial dapat terjadi.</p>
+            </div>
+            <div class="project">
+                <h3>Xenostresser</h3>
+                <p>Xenostresser adalah tools serangan DDoS yang dikembangkan untuk menguji ketahanan server terhadap serangan lalu lintas palsu secara masif.</p>
+            </div>
+            <div class="project">
+                <h3>Zentich AI</h3>
+                <p>Zentich AI adalah proyek berbasis Python dan machine learning yang dirancang untuk melakukan prediksi dan klasifikasi data.</p>
+            </div>
+            <div class="project">
+                <h3>Xein Tools</h3>
+                <p>Xein Tools adalah kumpulan alat hacking dan OSINT dalam satu paket terminal.</p>
+            </div>
+            <div class="project">
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>Tic-Tac-Toe klasik ini dikembangkan dengan HTML, CSS, dan JavaScript. Game ini memungkinkan dua pemain bermain secara bergiliran di satu perangkat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Kontak</h2>
+        <div class="social-links">
+            <a href="https://github.com/limit9172" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.tiktok.com/@loard2919?_t=ZS-8uwyaAytTeS&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/62895403397411" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:z48361363@gmail.com" class="social-icon"><i class="fab fa-google"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Zenith. Semua hak cipta dilindungi.</p>
+    </footer>
+</body>
+</html>
